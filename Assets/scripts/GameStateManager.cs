@@ -8,7 +8,7 @@ public class GameStateManager : MonoBehaviour   {
     // instancias de cada um dos estados do jogo
     public AberturaGameState telaInicialState = new AberturaGameState();
     public CreditosGameState telaCreditosState = new CreditosGameState();
-
+    public JogoGameState jogoState = new JogoGameState();
 void Start()    {
         // seta o estado inicial
         currentState = telaInicialState;
