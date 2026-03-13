@@ -47,8 +47,8 @@ public class Snake : MonoBehaviour
                 direction = Vector2Int.down;
             }
         }
-            // Só pode mover para a esquerda ou direita se estiver movendo na        
-            // direção Y.
+        // Só pode mover para a esquerda ou direita se estiver movendo na        
+        // direção Y.
         else if (direction.y != 0f)
         {
                 if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
