@@ -9,6 +9,16 @@ public class GameStateManager : MonoBehaviour   {
     public AberturaGameState telaInicialState = new AberturaGameState();
     public CreditosGameState telaCreditosState = new CreditosGameState();
     public JogoGameState jogoState = new JogoGameState();
+
+
+    public GameObject player;
+    public GameObject food;
+
+    public GameObject parede1;
+    public GameObject parede2;
+    public GameObject parede3;
+
+    public GameObject parede4;
 void Start()    {
         // seta o estado inicial
         currentState = telaInicialState;
@@ -33,6 +43,20 @@ public void switchState(GameBaseState state)    {
       // entra no novo estado
       currentState.enterState(this);
   }
+
+  public void ativarElementosJogo(bool interruptor)
+    {
+        player.GetComponent<SpriteRenderer>().enabled = interruptor;
+        player.GetComponent<Snake>().setAtivo(interruptor);
+        food.GetComponent<SpriteRenderer>().enabled = interruptor;
+        
+        parede1.GetComponent<SpriteRenderer>().enabled = interruptor;
+        parede2.GetComponent<SpriteRenderer>().enabled = interruptor;
+        parede3.GetComponent<SpriteRenderer>().enabled = interruptor;
+        parede4.GetComponent<SpriteRenderer>().enabled = interruptor;
+        
+
+    }
 
 }
 

@@ -14,7 +14,7 @@ public class Snake : MonoBehaviour
 
     public void Start()
     {
-        ativo = true; // remover essa linha depois.
+        // ativo = true; // remover essa linha depois.
 
         // Reseta a cobra para o tamanho inicial.
         // Faz isso limpando a lista, adicionando novamente a “cabeça”.       
