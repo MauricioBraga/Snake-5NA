@@ -82,4 +82,11 @@ private void FixedUpdate()
         int y = Mathf.RoundToInt(transform.position.y) + direction.y;
         transform.position = new Vector2(x, y);
     }
+
+    public void resetState()
+    {
+        direction = Vector2Int.right;
+        transform.position = Vector3.zero;
+        score = 0;
+    }
 }
